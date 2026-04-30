@@ -9,12 +9,17 @@ public class ScoreUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        txtScore.text = score.ToString();
+        txtScore.text = "Puntaje:" + score.ToString();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void AddPointAndUptateScore()
     {
-        
+        score++;
+        txtScore.text = "Puntaje:" + score.ToString();
+        if(score >= 3 )
+        {
+            txtScore.text = "Ganaste";
+
+        }
+
     }
 }
